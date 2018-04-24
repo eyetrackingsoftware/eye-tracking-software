@@ -242,9 +242,6 @@ XLabsAnts.prototype.render = function() {
           Canvas.context.stroke();
         }
     }
-    else {
-        console.log("Gaze unavailable")
-    }
 }
 
 XLabsAnts.prototype.removeAnt = function( idx ) {

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2acaa73-9aaf-4982-94df-e7e05420d5ac" name="Default" comment="" />
+    <list default="true" id="a2acaa73-9aaf-4982-94df-e7e05420d5ac" name="Default" comment="created blinks folder and files">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ants/ants.js" afterPath="$PROJECT_DIR$/ants/ants.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,21 +26,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blinks.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="blinks.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blinks/blinks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="167" column="7" lean-forward="true" selection-start-line="167" selection-start-column="7" selection-end-line="167" selection-end-column="7" />
+            <state relative-caret-position="149">
+              <caret line="164" column="16" lean-forward="false" selection-start-line="164" selection-start-column="16" selection-end-line="164" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ants.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ants.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ants/ants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="414" column="26" lean-forward="true" selection-start-line="414" selection-start-column="26" selection-end-line="414" selection-end-column="26" />
+            <state relative-caret-position="70">
+              <caret line="243" column="5" lean-forward="false" selection-start-line="243" selection-start-column="5" selection-end-line="243" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -87,10 +89,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ants/ants.js" />
         <option value="$PROJECT_DIR$/api/xlabs.js" />
         <option value="$PROJECT_DIR$/blinks/index.html" />
         <option value="$PROJECT_DIR$/blinks/blinks.js" />
+        <option value="$PROJECT_DIR$/ants/ants.js" />
       </list>
     </option>
   </component>
@@ -202,7 +204,7 @@
       <option name="presentableId" value="Default" />
       <updated>1524002484496</updated>
       <workItem from="1524002486084" duration="1402000" />
-      <workItem from="1524605912490" duration="4408000" />
+      <workItem from="1524605912490" duration="4521000" />
     </task>
     <task id="LOCAL-00001" summary="added our developer key">
       <created>1524002917637</created>
@@ -222,7 +224,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5810000" />
+    <option name="totallyTimeSpent" value="5923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1256" height="689" extended-state="0" />
@@ -346,14 +348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ants/ants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="414" column="26" lean-forward="true" selection-start-line="414" selection-start-column="26" selection-end-line="414" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blinks/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -372,8 +366,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blinks/blinks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="167" column="7" lean-forward="true" selection-start-line="167" selection-start-column="7" selection-end-line="167" selection-end-column="7" />
+        <state relative-caret-position="149">
+          <caret line="164" column="16" lean-forward="false" selection-start-line="164" selection-start-column="16" selection-end-line="164" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ants/ants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="243" column="5" lean-forward="false" selection-start-line="243" selection-start-column="5" selection-end-line="243" selection-end-column="5" />
           <folding />
         </state>
       </provider>

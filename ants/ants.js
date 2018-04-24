@@ -242,6 +242,9 @@ XLabsAnts.prototype.render = function() {
           Canvas.context.stroke();
         }
     }
+    else {
+        console.log("Gaze unavailable")
+    }
 }
 
 XLabsAnts.prototype.removeAnt = function( idx ) {
@@ -413,7 +416,7 @@ function onXlabsUpdate() {
     ants.updateGaze();
 }
 
-xLabs.setup( onXlabsReady, onXlabsUpdate, null, "myToken" );
+xLabs.setup( onXlabsReady, onXlabsUpdate, null, "b661dc22-d729-443c-93f0-da7a5b426993" );
 
 
 

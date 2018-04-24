@@ -126,7 +126,7 @@ var xLabsPlayer = {
 
 };
 
-xLabs.setup( xLabsPlayer.onApiReady, xLabsPlayer.onApiState, null, "myToken" );
+xLabs.setup( xLabsPlayer.onApiReady, xLabsPlayer.onApiState, null, "b661dc22-d729-443c-93f0-da7a5b426993" );
 
 // window.onload = function() {
 //     xLabsPlayer.setup();

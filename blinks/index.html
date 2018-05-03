@@ -10,7 +10,12 @@
 <body>
    <script>
        function changeColor() {
-           document.getElementById("clickButton").style.color = "red";
+           if (document.getElementById("clickButton").style.backgroundColor == "red") {
+               document.getElementById("clickButton").style.backgroundColor = "blue";
+           }
+           else {
+               document.getElementById("clickButton").style.backgroundColor = "red";
+           }
 
        }
    </script>
@@ -28,7 +33,7 @@
 
     </script>
     <h1>xLabs: Gaze Tracking Passive Calibration Demo</h1>
-    <button id="clickButton" onclick="changeColor()"> Blink!</button>
+    <button id="clickButton" onclick="changeColor()"> <h3>Blink!</h3></button>
 
     <script src="../api/xlabs.js"></script>
   <script type="text/javascript" src="../useful/util.js"></script>

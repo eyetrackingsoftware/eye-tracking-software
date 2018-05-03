@@ -261,14 +261,14 @@ XLabsAnts.prototype.render = function() {
         if (this.hasCalibrated === 1) {
             console.log("Gaze unavailable");
             this.unavailableCounter += 1;
-            if (this.unavailableCounter > 100) {
+            if (this.unavailableCounter > 70) {
                 console.log("Blink!!!");
                 document.getElementById("clickButton").click();
                 this.unavailableCounter = 0;
-                var para = document.createElement("P");
-                var t = document.createTextNode("Blink detected");
-                para.appendChild(t);
-                document.body.appendChild(para);
+                // var para = document.createElement("P");
+                // var t = document.createTextNode("Blink detected");
+                // para.appendChild(t);
+                // document.body.appendChild(para);
             }
         }
     }

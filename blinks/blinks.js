@@ -6,7 +6,7 @@
     var readyCallbacks = [];
 
     function changeColor() {
-	document.getElementById("button").style.color = "red";
+	document.getElementById("clickButton").style.color = "red";
 
     }
 
@@ -268,6 +268,7 @@ XLabsAnts.prototype.render = function() {
             this.unavailableCounter += 1;
             if (this.unavailableCounter > 100) {
                 console.log("Blink!!!");
+                document.getElementById("clickButton").click();
                 this.unavailableCounter = 0;
                 var para = document.createElement("P");
                 var t = document.createTextNode("Blink detected");

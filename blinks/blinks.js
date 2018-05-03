@@ -5,11 +5,6 @@
     var loading = [];
     var readyCallbacks = [];
 
-    function changeColor() {
-	document.getElementById("clickButton").style.color = "red";
-
-    }
-
 
     // Load an image url or an array of image urls
     function load(urlOrArr) {

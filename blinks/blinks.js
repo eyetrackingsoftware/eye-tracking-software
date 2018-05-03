@@ -92,6 +92,10 @@ XLabsAnts = function() {
     this.movingAnimationFrameDistancePixels = 10;
 
     this.NUM_ANT_WALKING_FRAMES = 4;
+
+    //Added by Troy
+    this.unavailableCounter = 0;
+    this.hasCalibrated = 0;
 }
 
 XLabsAnts.prototype.addRandomAnt = function() {
@@ -169,14 +173,16 @@ XLabsAnts.prototype.update = function() {
 
 
     // Add more ants
-    if( this.ants.length < 10 ) {
-        if( this.lastAddAnt === null ) {
-            this.lastAddAnt = Date.now();
-        }
+    if (this.hasCalibrated === 0) {
+        if (this.ants.length < 10) {
+            if (this.lastAddAnt === null) {
+                this.lastAddAnt = Date.now();
+            }
 
-        if( now - this.lastAddAnt > this.addAntInterval ) {
-            this.addRandomAnt();
-            this.lastAddAnt = now;
+            if (now - this.lastAddAnt > this.addAntInterval) {
+                this.addRandomAnt();
+                this.lastAddAnt = now;
+            }
         }
     }
 }
@@ -215,9 +221,17 @@ XLabsAnts.prototype.render = function() {
     //Canvas.context.arc( this.mouseX, this.mouseY, 30, 0, 2 * Math.PI, false );
     //Canvas.context.fill();
 
+    var calibrationStatus = parseInt( xLabs.getConfig( "calibration.status" ) );
+    if (calibrationStatus === 1) {
+        //if (this.hasCalibrated === 0) {
+        //    this.hasCalibrated = 1;
+        //}
+        this.hasCalibrated = 1;
+    }
 
     // gaze feedback
     if( Gaze.available ) {
+        this.unavailableCounter = 0;
         if( squished ) {
             Canvas.context.strokeStyle = "rgba( 255, 200, 0, 0.7 )";
             Canvas.context.beginPath();
@@ -243,7 +257,18 @@ XLabsAnts.prototype.render = function() {
         }
     }
     else {
-        console.log("Gaze unavailable")
+        if (this.hasCalibrated === 1) {
+            console.log("Gaze unavailable");
+            this.unavailableCounter += 1;
+            if (this.unavailableCounter > 100) {
+                console.log("Blink!!!");
+                this.unavailableCounter = 0;
+                var para = document.createElement("P");
+                var t = document.createTextNode("Blink detected");
+                para.appendChild(t);
+                document.body.appendChild(para);
+            }
+        }
     }
 }
 
@@ -381,8 +406,6 @@ XLabsAnts.ant.prototype.render = function( xLabsAnts ) {
 
 }
 
-
-
 // -------------------------------------------------------------------------
 // -------------------------------------------------------------------------
 // -------------------------------------------------------------------------
@@ -407,7 +430,7 @@ function onXlabsReady() {
         //         ants.mouseX = xLabs.scr2docX(e.screenX)
         //         ants.mouseY = xLabs.scr2docY(e.screenY)
         //     }
-        // });
+        // })
         ants.mainLoop();
     });
 }
